@@ -14,6 +14,22 @@
 
 @implementation AppDelegate
 
+- (IBAction)calculateClick:(NSMenuItem *)sender {
+    if([sender.title isEqualToString:@"+"]){
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"PLUS" object:self];
+    }else if([sender.title isEqualToString:@"-"]){
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"MINUS" object:self];
+    }else if([sender.title isEqualToString:@"*"]){
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"MULTI" object:self];
+    }else if([sender.title isEqualToString:@"/"]){
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"DIVISION" object:self];
+    }else if([sender.title isEqualToString:@"sqrt"]){
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"SQRT" object:self];
+    }else{
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"EQUAL" object:self];
+    }
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
 }

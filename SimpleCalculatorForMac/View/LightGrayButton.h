@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LightGrayButton.h
 //  SimpleCalculatorForMac
 //
 //  Created by JihoonPark on 10/10/2018.
@@ -8,8 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ViewController : NSViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface LightGrayButton : NSButton
 
 @end
 
+NS_ASSUME_NONNULL_END
